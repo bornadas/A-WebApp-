@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Noto+Sans:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <title>WayFair@Home:location</title>
+</head>
+
+<body>
+  <header>
+    <div>
+      <h1><strong>WayFair@Home</strong> </h1>
+      <h2><strong>You are your choices</strong></h2>
+    </div>
+    <nav>
+      <a href="index.html">Products</a>
+      <a href="stores.html">Stores</a>
+      <a href="stockInformation.html">Stock Information</a>
+      <a class="active" href="address.html">Locations</a>
+    </nav>
+  </header>
+
+  <main>
+    <button class="add-storeAddress-button">Add a store Address</button>
+    <div class="list-of-storeAddresses"></div>
+
+    <form class="add-storeAddress-form" action="/api/address" method="post">
+      <h2>Add a new store address</h2>
+      <label>
+        Street Name:
+        <input type="text" placeholder="Street Name" name="street" required minlength="1">
+      </label>
+      <label>
+        Street number:
+        <input type="number" placeholder="Street Number" name="streetNo" required minlength="1">
+      </label>
+      <label>
+        Zip Code:
+        <input type="number" placeholder="Zip Code" name="zipCode" required="required">
+      </label>
+      <label>
+        City:
+        <input type="text" placeholder="City" name="city" required minlength="1">
+      </label>
+      <label>
+        Country:
+        <input type="text" placeholder="Country" name="country" required minlength="1">
+      </label>
+      <input type="submit" value="Add Store Address">
+    </form>
+    <br />
+    <form class="change-storeAddress-form" action="" method="put">
+      <h2>Change the data:</h2>
+      <label>
+        Street Name:
+        <input type="text" placeholder="Street Name" name="street" required minlength="1">
+      </label>
+      <label>
+        Street number:
+        <input type="number" placeholder="Street Number" name="streetNo" required minlength="1">
+      </label>
+      <label>
+        Zip Code:
+        <input type="number" placeholder="Zip Code" name="zipCode" required="required">
+      </label>
+      <label>
+        City:
+        <input type="text" placeholder="City" name="city" required minlength="1">
+      </label>
+      <label>
+        Country:
+        <input type="text" placeholder="Country" name="country" required minlength="1">
+      </label>
+      <input type="submit" value="Change Store Address">
+    </form>
+  </main>
+  <br />
+  <footer>
+    <p>© 2021 WayFair Furniture</p>
+    <p><a href="mailto:info@wayfairfurniture.se">info@wayfairfurniture.se</a></p>
+    <p>Tel: 0721459988</p>
+  </footer>
+
+  <script src="address.js"></script>
+</body>
+
+</html>

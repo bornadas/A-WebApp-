@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Noto+Sans:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <title>WayFair@Home:stocks</title>
+</head>
+
+<body>
+  <header>
+    <div>
+      <h1><strong>WayFair@Home</strong> </h1>
+      <h2><strong>You are your choices</strong> </h2>
+    </div>
+    <nav>
+      <a href="index.html">Products</a>
+      <a href="stores.html">Stores</a>
+      <a class="active" href="stockInformation.html">Stock Information</a>
+      <a href="address.html">Locations</a>
+    </nav>
+  </header>
+  <main>
+    <button class="add-stock-button">Add Stock</button>
+    <div class="list-of-stocks"></div>
+
+    <form class="add-stock-form" action="/api/productsXstores" method="post">
+      <h2>Create a new stock</h2>
+      <label>
+        ID:
+        <input type="number" min="0" max="10000" step="1" placeholder="id" name="id" required="required">
+      </label>
+      <label>
+        <label>
+          Store ID:
+          <input type="number" min="0" max="10000" step="1" placeholder="store id" name="storesId" required="required">
+        </label>
+        Product ID:
+        <input type="number" min="0" max="10000" step="1" placeholder="product id" name="productId" required="required">
+      </label>
+      <label>
+        Product Quantity:
+        <input type="number" min="0" max="10000" step="1" placeholder="product quantity" name="quantity"
+          required="required">
+      </label>
+
+      <input type="submit" value="Add stock">
+    </form>
+    <br />
+    <form class="change-stock-form" action="" method="put">
+      <h2>Change the stock</h2>
+      <input type="hidden" name="id">
+      <label>
+        Store ID:
+        <input type="number" min="0" max="10000" step="1" placeholder="store id" name="storesId" required="required">
+      </label>
+      <label>
+        Product ID:
+        <input type="number" min="0" max="10000" step="1" placeholder="product id" name="productId" required="required">
+      </label>
+      <label>
+        Product Quantity:
+        <input type="number" min="0" max="10000" step="1" placeholder="product quantity" name="quantity"
+          required="required">
+      </label>
+      <input type="submit" value="Change stock">
+    </form>
+  </main>
+  <br />
+  <footer>
+    <p>© 2021 WayFair Furniture</p>
+    <p><a href="mailto:info@wayfairfurniture.se">info@wayfairfurniture.se</a></p>
+    <p>Tel: 0721459988</p>
+  </footer>
+
+  <script src="stockInformation.js"></script>
+</body>
+
+</html>

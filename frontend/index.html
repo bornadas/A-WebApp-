@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Noto+Sans:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <title>WayFair@Home:products</title>
+</head>
+
+<body>
+  <header>
+    <div>
+      <h1><strong>WayFair@Home</strong> </h1>
+      <h2><strong>You are your choices</strong> </h2>
+    </div>
+    <nav>
+      <a class="active" href="index.html">Products</a>
+      <a href="stores.html">Stores</a>
+      <a href="stockInformation.html">Stock Information</a>
+      <a href="address.html">Locations</a>
+    </nav>
+  </header>
+
+  <main>
+    <button class="add-product-button">Add a product</button>
+    <div class="list-of-products"></div>
+
+
+    <form class="add-product-form" action="/api/products" method="post">
+      <h2>Create a new product</h2>
+      <label>
+        Product name:
+        <input type="text" placeholder="Product name" name="productName" required minlength="1">
+      </label>
+      <label>
+        Product Description:
+        <input type="text" placeholder="product description" name="productDescription" required minlength="1">
+      </label>
+      <label>
+        Product Image:
+        <input type="text" placeholder="product image" name="productImage">
+      </label>
+      <label>
+        Price:
+        <input type="number" min="0" max="10000" step="1" placeholder="price" name="price" required="required">
+      </label>
+      <input type="submit" value="Add product">
+    </form>
+    <br />
+    <form class="change-product-form" action="" method="put">
+      <h2>Change the data</h2>
+      <input type="hidden" name="id">
+      <label>
+        Product name:
+        <input type="text" placeholder="Product name" name="productName" required minlength="1">
+      </label>
+      <label>
+        Product Description:
+        <input type="text" placeholder="product description" name="productDescription" required minlength="1">
+      </label>
+      <label>
+        Price:
+        <input type="number" min="0" max="10000" step="1" placeholder="price" name="price" required="required">
+      </label>
+      <input type="submit" value="Change product">
+    </form>
+  </main>
+  <br />
+
+  <footer>
+    <p>© 2021 WayFair Furniture</p>
+    <p><a href="mailto:info@wayfairfurniture.se">info@wayfairfurniture.se</a></p>
+    <p>Tel: 0721459988</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

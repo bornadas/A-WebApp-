@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Noto+Sans:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <title>WayFair@Home:stores</title>
+</head>
+
+<body>
+  <header>
+    <div>
+      <h1><strong>WayFair@Home</strong> </h1>
+      <h2><strong>You are your choices</strong> </h2>
+    </div>
+    <nav>
+      <a href="index.html">Products</a>
+      <a class="active" href="stores.html">Stores</a>
+      <a href="stockInformation.html">Stock Information</a>
+      <a href="address.html">Locations</a>
+    </nav>
+  </header>
+
+  <main>
+    <button class="add-store-button">Add a store</button>
+    <div class="list-of-stores"></div>
+
+    <form class="add-store-form" action="/api/stores" method="post">
+      <h2>Create a new store</h2>
+      <label>
+        Store name:
+        <input type="text" placeholder="Store name" name="storeName" required minlength="1">
+      </label>
+      <label>
+        Is it the Warehouse ?:
+        <input type="text" placeholder="Yes or No" name="isWareHouse" required minlength="1" />
+      </label>
+      <label>
+        Location ID:
+        <input type="number" placeholder="address Id" name="addressId" required>
+      </label>
+
+      <input type="submit" value="Add store">
+
+    </form>
+    <br />
+    <form class="change-store-form" action="" method="put">
+      <h2>Change the data:</h2>
+      <input type="hidden" name="id">
+      <label>
+        Store name:
+        <input type="text" placeholder="Store name" name="storeName" required minlength="1">
+      </label>
+      <label>
+        Is it the Warehouse ?:
+        <input type="text" placeholder="Yes or No" name="isWareHouse" required minlength="1" />
+      </label>
+      <label>
+        Location ID:
+        <input type="text" placeholder="address Id" name="addressId" required minlength="1">
+      </label>
+
+      <input type="submit" value="Change store">
+    </form>
+  </main>
+  <br />
+  <footer>
+    <p>© 2021 WayFair Furniture</p>
+    <p><a href="mailto:info@wayfairfurniture.se">info@wayfairfurniture.se</a></p>
+    <p>Tel: 0721459988</p>
+  </footer>
+
+  <script src="stores.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+body {
+  max-height: 100%;
+  color:darkgreen;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: 100%;  
+}
+
+header{
+  background:lightgreen;
+}
+
+body{
+display: flex;
+min-height: 100vh;
+flex-direction: column;
+font-family: 'Noto Sans';
+}
+
+main{
+  flex: 1;
+}
+
+div{
+width: 100%;
+height: 100%;
+}
+
+h1{
+  font-size: 80px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+}
+
+h2{
+  font-size: 2em;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+  color:black;
+}
+
+label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+input {
+  display: inline-block;
+  margin-top: 5px;
+  width: 100%;
+  border: 1px solid #ccc;
+  box-sizing: border-box
+}
+
+input[type="submit"] {
+  width: auto;
+ float: right;
+}
+
+footer {
+  background:lightgreen; 
+  width: 100%;
+  padding: 20px;
+  color:blue;
+  text-align: center;
+}
+
+footer p {
+  margin: 5px;
+}
+
+button {
+  background-color: #04AA6D;
+  position:relative;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border:0ex;
+  cursor: pointer;
+  width: 50%;
+}
+
+button:hover {
+  opacity: 2.5;
+}
+
+body nav {
+  margin-left: -12px; 
+}
+
+body nav a {
+  display: inline-block;
+  padding: 0 15px;
+  color: rgb(38, 96, 157);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+body nav a:hover {
+  color:  rgb(65, 137, 213);
+}
+
+body nav a.active {
+  color:rgb(12, 44, 77)
+}
+
+.add-product-form, .change-product-form , .add-store-form, .change-store-form , .add-storeAddress-form, .change-storeAddress-form, .add-stock-form, .change-stock-form{
+  display: none;
+}
+.thumbnail:hover {
+    position:relative;
+    top:15px;   
+    width:500px;
+    height:auto;
+    display:block;
+    z-index:999;
+}
